@@ -23,5 +23,15 @@ export class Rendezveny implements IRendezvény{
     }
     addResztvevo(resztvevo: Resztvevo):void{
         this.resztvevok.push(resztvevo);
+        console.log(`Résztvevő hozzáadva: ${resztvevo.nev}`);
     }
+    removeResztvevo(email:string):void{
+        const originalLength = this.resztvevok.length;
+        this.resztvevok = this.resztvevok.filter( r => r.email !== email);
+        if(this.resztvevok.length < originalLength)
+            console.log(`Résztvevő törölve: ${email}`);
+        else
+        console.log(`Résztvevő nem található: ${email}`);
+    }
+
 }
