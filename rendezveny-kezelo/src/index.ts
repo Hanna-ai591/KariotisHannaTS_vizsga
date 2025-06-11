@@ -12,4 +12,6 @@ console.log("Rendezvények:");;
 service.getrendezvenyek().forEach(r => {
     console.log(` -${r.nev}, ${r.tematika}, helyszín: ${r.helyszin}, résztvevők száma: ${r.resztvevok.length}`);
 });
+
+service.removeRezstvevoFromRendezveny("Nyári fesztivál","john.doe@gmail.com");
  
