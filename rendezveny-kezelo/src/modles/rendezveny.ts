@@ -1,16 +1,18 @@
+import { Resztvevo } from "./resztvevo";
+
 export interface IRendezvény {
     nev: string;
     helyszin: string;
     ido: Date;
     tematika:string;
-    resztvevok:string[];
+    resztvevok:Resztvevo[];
 }
 export class Rendezveny implements IRendezvény{
     nev: string;
     helyszin: string;
     ido: Date;
     tematika: string;
-    resztvevok: string[];
+    resztvevok: Resztvevo[];
 
     constructor(nev: string, helyszin: string, ido: Date, tematika:string){
     this.nev = nev;
@@ -19,7 +21,7 @@ export class Rendezveny implements IRendezvény{
     this.tematika = tematika;
     this.resztvevok = [];
     }
-    addResztvevo(resztvevoNev: string){
-        this.resztvevok.push(resztvevoNev);
+    addResztvevo(resztvevo: Resztvevo):void{
+        this.resztvevok.push(resztvevo);
     }
 }
