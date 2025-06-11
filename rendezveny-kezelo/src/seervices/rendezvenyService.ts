@@ -1,4 +1,5 @@
-import { Rendezveny } from "../modles/rendezveny";
+import { Rendezveny } from "../models/rendezveny";
+import { Resztvevo } from "../models/resztvevo";
 
 export class RendezvenyService{
     private rendezvenyek: Rendezveny[] = [];
@@ -21,6 +22,25 @@ export class RendezvenyService{
             r.tematika = newTematika;
         else
         console.log(`Rendezvény nem található: ${name}`);
+    }
+    addResztvevoToRendezveny(rendezvenyNev: string, resztvevo: Resztvevo){
+        const rendezveny = this.rendezvenyek.find(r => r.nev  === rendezvenyNev);
+        if (rendezveny)
+            rendezveny.addResztvevo(resztvevo);
+        
+        else
+        console.log(`Rendezmény nem található: ${rendezvenyNev}`);
+        
+    }
+    removeRezstvevoFromRendezveny(rendezvenyNev: string, email:string):void{
+        const rendezveny = this.rendezvenyek.find(r => r.nev === rendezvenyNev);
+        if(rendezveny)
+            rendezveny.removeResztvevo(email);
+        else
+        console.log(`Rendezveny nem található: ${rendezvenyNev}`);
+        
+
+        
     }
 
 }

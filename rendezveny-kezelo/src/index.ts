@@ -1,4 +1,4 @@
-import { Rendezveny } from "./modles/rendezveny"
+import { Rendezveny } from "./models/rendezveny"
 import { RendezvenyService } from "./seervices/rendezvenyService"
 
 const service = new RendezvenyService();

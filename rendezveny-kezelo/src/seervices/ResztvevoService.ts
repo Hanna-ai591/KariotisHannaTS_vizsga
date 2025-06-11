@@ -1,4 +1,4 @@
-import { Resztvevo } from "../modles/resztvevo";
+import { Resztvevo } from "../models/resztvevo";
 export class ResztvevoService {
     private resztvevok: Resztvevo[] = [];
 
