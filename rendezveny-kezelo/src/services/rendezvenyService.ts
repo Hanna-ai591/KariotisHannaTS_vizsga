@@ -1,9 +1,11 @@
 import { Rendezveny } from "../models/rendezveny";
 import { Resztvevo } from "../models/resztvevo";
+import { LogAddition } from "../decorators/logAddition";
 
 export class RendezvenyService{
     private rendezvenyek: Rendezveny[] = [];
 
+    @LogAddition
     addRendezvenyek(rendezveny:Rendezveny){
         this.rendezvenyek.push(rendezveny);
         console.log(`Rendezvény hozzáadva: ${rendezveny.nev}`);
@@ -43,5 +45,6 @@ export class RendezvenyService{
     getRendezvenyByTematika(tematika:string): Rendezveny[]{
         return this.rendezvenyek.filter(r => r.tematika.toLowerCase() ===tematika.toLocaleLowerCase());
     }
+    
 
 }

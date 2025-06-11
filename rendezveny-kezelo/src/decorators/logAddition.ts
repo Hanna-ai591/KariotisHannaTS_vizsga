@@ -1,4 +1,4 @@
-export function LOgAddition(
+export function LogAddition(
   target:any,
   propertyKey:String,
   descriptor: PropertyDescriptor
