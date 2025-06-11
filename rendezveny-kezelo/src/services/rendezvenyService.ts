@@ -34,7 +34,7 @@ export class RendezvenyService{
         console.log(`Rendezmény nem található: ${rendezvenyNev}`);
         
     }
-    removeRezstvevoFromRendezveny(rendezvenyNev: string, email:string):void{
+    removeResztvevoFromRendezveny(rendezvenyNev: string, email:string):void{
         const rendezveny = this.rendezvenyek.find(r => r.nev === rendezvenyNev);
         if(rendezveny)
             rendezveny.removeResztvevo(email);

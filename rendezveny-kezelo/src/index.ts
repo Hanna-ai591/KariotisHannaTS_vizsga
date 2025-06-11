@@ -28,7 +28,7 @@ service.getrendezvenyek().forEach(r =>{
         });
     }
 });
-service.removeRezstvevoFromRendezveny("Nári fesztivál", "john.doe@gmail.com");
+service.removeResztvevoFromRendezveny("Nári fesztivál", "john.doe@gmail.com");
 service.removeRendezvenyekByName("Nyári fesztivál");
 
 console.log("Rendezvények törlése utás:");
