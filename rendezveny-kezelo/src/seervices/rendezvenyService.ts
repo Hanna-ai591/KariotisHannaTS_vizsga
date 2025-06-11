@@ -11,5 +11,14 @@ export class RendezvenyService{
         this.rendezvenyek = this.rendezvenyek.filter(r => r.nev !== name);
 
     }
+    getrendezvenyek(){
+        return this.rendezvenyek;
+    }
+    updateTematika(name: string, newTematika: string){
+        const r = this.rendezvenyek.find(r => r.nev === name);
+        if(r)
+            r.tematika = newTematika;
+        
+    }
 
 }
