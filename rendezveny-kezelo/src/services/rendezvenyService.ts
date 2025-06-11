@@ -38,9 +38,10 @@ export class RendezvenyService{
             rendezveny.removeResztvevo(email);
         else
         console.log(`Rendezveny nem található: ${rendezvenyNev}`);
-        
 
-        
+    }
+    getRendezvenyByTematika(tematika:string): Rendezveny[]{
+        return this.rendezvenyek.filter(r => r.tematika.toLowerCase() ===tematika.toLocaleLowerCase());
     }
 
 }
